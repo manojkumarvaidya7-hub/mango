@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean & Brew Cafe</title>
+
+  <style>
+    /* 1. Basic page settings */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffaf0;
+      color: #35271d;
+      line-height: 1.6;
+    }
+
+    /* 2. Navigation bar */
+    header {
+      background: #244b38;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header h2 {
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* 3. Main welcome section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: #e9ddc8;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #244b38;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background: #173526;
+    }
+
+    /* 4. Main content */
+    main {
+      width: min(100% - 36px, 1000px);
+      margin: auto;
+    }
+
+    section {
+      padding: 45px 0;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    /* 5. Menu cards */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit, minmax(min(100%, 220px), 1fr)
+      );
+      gap: 20px;
+    }
+
+    .menu-card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #35271d12;
+      border: 1px solid #eee4d5;
+    }
+
+    .menu-card h3 {
+      margin-top: 0;
+    }
+
+    .price {
+      color: #244b38;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* 6. Contact section */
+    .contact {
+      background: #e9ddc8;
+      padding: 28px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    /* 7. Footer */
+    footer {
+      background: #244b38;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      margin-top: 35px;
+    }
+
+    footer p {
+      margin: 4px;
+    }
+
+    /* 8. Smaller screens */
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <h2>☕ Bean & Brew</h2>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Welcome section -->
+  <div class="hero" id="home">
+    <h1>Welcome to Bean & Brew Cafe</h1>
+    <p>Fresh coffee, delicious snacks and happy moments.</p>
+    <a href="#menu" class="button">Explore Our Menu</a>
+  </div>
+
+  <main>
+
+    <!-- About section -->
+    <section id="about" class="intro">
+      <h2>About Our Cafe</h2>
+      <p>
+        Bean & Brew is a sample cafe website created to showcase
+        a welcoming place for coffee lovers and friends.
+        Enjoy a relaxing atmosphere and your favourite snacks.
+      </p>
+    </section>
+
+    <!-- Menu section -->
+    <section id="menu">
+      <h2>Our Popular Menu</h2>
+
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <h3>☕ Hot Coffee</h3>
+          <p>Freshly brewed coffee for your day.</p>
+          <p class="price">₹80</p>
+        </div>
+
+        <div class="menu-card">
+          <h3>🧊 Cold Coffee</h3>
+          <p>A refreshing and creamy drink.</p>
+          <p class="price">₹100</p>
+        </div>
+
+        <div class="menu-card">
+          <h3>🥪 Veg Sandwich</h3>
+          <p>A tasty snack made with fresh vegetables.</p>
+          <p class="price">₹90</p>
+        </div>
+
+        <div class="menu-card">
+          <h3>🍰 Chocolate Cake</h3>
+          <p>A sweet treat for chocolate lovers.</p>
+          <p class="price">₹120</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Opening hours -->
+    <section class="intro">
+      <h2>Opening Hours</h2>
+      <p>Monday – Sunday</p>
+      <p>9:00 AM – 9:00 PM</p>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="contact">
+      <h2>Visit Our Cafe</h2>
+      <p>Address: Your Street, Your City</p>
+      <p>Email: hello@example.com</p>
+
+      <a class="button" href="mailto:hello@example.com">
+        Send Us an Email
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Bean & Brew Cafe — Student Portfolio Project</p>
+    <p>© 2026 All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
